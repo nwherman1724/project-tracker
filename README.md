@@ -10,11 +10,11 @@ You'll need to use the [Day.js](https://day.js.org/en/) library to work with dat
 
 ## TO DO
 
-display current date at the top of the calendar
+display current date at the top of the calendar ()
 
-add time blocks for 9am - 5pm
-timeblock colors change based on time of day
-add event listener to save event to local storage
+add time blocks for 9am - 5pm (X)
+timeblock colors change based on time of day ()
+add event listener to save event to local storage ()
 
 ## User Story
 
