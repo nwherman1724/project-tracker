@@ -16,6 +16,15 @@ $(function () {
   // current hour in 24-hour time?
 
   //if statement that grabs current time and changes class for color based on whether the time is in the past, the curent hour, or a future hour
+  let timeSlot = document.querySelectorAll('.time-block');
+  let currentTime = dayjs();
+  if(currentTime > timeSlot) {
+    timeSlot.classList.add('past');
+  } else if(currentTime = timeSlot) {
+    timeSlot.classList.add('present');
+  } else {
+    timeSlot.classList.add('future');
+  }
 
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
