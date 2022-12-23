@@ -2,6 +2,11 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+
+  var today = dayjs();
+  $('#currentDay').text(today.format('MMM D, YYYY'));
+  
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -17,14 +22,22 @@ $(function () {
 
   //if statement that grabs current time and changes class for color based on whether the time is in the past, the curent hour, or a future hour
   let timeSlot = document.querySelectorAll('.time-block');
-  let currentTime = dayjs();
-  if(currentTime > timeSlot) {
-    timeSlot.classList.add('past');
-  } else if(currentTime = timeSlot) {
-    timeSlot.classList.add('present');
+  let currentTime = dayjs().format('H');
+  console.log(currentTime)
+  console.log(timeSlot)
+  
+  for(var i = 0; i < timeSlot.length; i++){
+  if(currentTime > timeSlot[i]) {
+    console.log("past")
+    timeSlot[i].classList.add('past');
+  } else if(currentTime = timeSlot[i]) {
+    console.log("present")
+    timeSlot[i].classList.add('present');
   } else {
-    timeSlot.classList.add('future');
+    console.log("future")
+    timeSlot[i].classList.add('future');
   }
+}
 
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
@@ -33,6 +46,4 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 
-  var today = dayjs();
-$('#currentDay').text(today.format('MMM D, YYYY'));
 });
