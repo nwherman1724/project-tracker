@@ -22,22 +22,109 @@ $(function () {
 
   //if statement that grabs current time and changes class for color based on whether the time is in the past, the curent hour, or a future hour
   let timeSlot = document.querySelectorAll('.time-block');
+  let timeSlotArr = [timeSlot];
   let currentTime = dayjs().format('H');
   console.log(currentTime)
-  console.log(timeSlot)
+  console.log(timeSlotArr)
   
-  for(var i = 0; i < timeSlot.length; i++){
-  if(currentTime > timeSlot[i]) {
-    console.log("past")
-    timeSlot[i].classList.add('past');
-  } else if(currentTime = timeSlot[i]) {
-    console.log("present")
-    timeSlot[i].classList.add('present');
-  } else {
-    console.log("future")
-    timeSlot[i].classList.add('future');
+//   for(var i = 0; i < timeSlotArr.length; i++){
+//   if(currentTime > timeSlotArr[i]) {
+//     console.log("past")
+//     timeSlotArr[i].classList.add('past');
+//   } else if(currentTime = timeSlotArr[i]) {
+//     console.log("present")
+//     timeSlotArr[i].classList.add('present');
+//   } else {
+//     console.log("future")
+//     timeSlotArr[i].classList.add('future');
+//   }
+// }
+
+
+//adds past to each element
+  // for (const timeBlock of timeSlot){
+  //   console.log(timeBlock)
+  //     timeBlock.classList.add('past');
+  // }
+
+
+  function changeColor() {
+  var nine = document.getElementById('hour-9');
+  var ten = document.getElementById('hour-10');
+  var eleven = document.getElementById('hour-11');
+  var twelve = document.getElementById('hour-12');
+  var thirteen = document.getElementById('hour-13');
+  var fourteen = document.getElementById('hour-14');
+  var fifteen = document.getElementById('hour-15');
+  var sixteen = document.getElementById('hour-16');
+  var seventeen = document.getElementById('hour-17');
+  console.log(nine);
+
+  if(currentTime > 9) {
+    nine.classList.remove('present')
+    nine.classList.add('past')
+  } else if (currentTime < 9){
+    nine.classList.remove('present')
+    nine.classList.add('future')
   }
-}
+  if(currentTime > 10) {
+    ten.classList.remove('present')
+    ten.classList.add('past')
+  } else if (currentTime < 10){
+    ten.classList.remove('present')
+    ten.classList.add('future')
+  }
+  if(currentTime > 11) {
+    eleven.classList.remove('present')
+    eleven.classList.add('past')
+  } else if (currentTime < 11){
+    eleven.classList.remove('present')
+    eleven.classList.add('future')
+  }
+  if(currentTime > 12) {
+    twelve.classList.remove('present')
+    twelve.classList.add('past')
+  } else if (currentTime < 12){
+    twelve.classList.remove('present')
+    twelve.classList.add('future')
+  }
+  if(currentTime > 13) {
+    thirteen.classList.remove('present')
+    thirteen.classList.add('past')
+  } else if (currentTime < 13){
+    thirteen.classList.remove('present')
+    thirteen.classList.add('future')
+  }
+  if(currentTime > 14) {
+    fourteen.classList.remove('present')
+    fourteen.classList.add('past')
+  } else if (currentTime < 14){
+    fourteen.classList.remove('present')
+    fourteen.classList.add('future')
+  }
+  if(currentTime > 15) {
+    fifteen.classList.remove('present')
+    fifteen.classList.add('past')
+  } else if (currentTime < 15){
+    fifteen.classList.remove('present')
+    fifteen.classList.add('future')
+  }
+  if(currentTime > 16) {
+    sixteen.classList.remove('present')
+    sixteen.classList.add('past')
+  } else if (currentTime < 16){
+    sixteen.classList.remove('present')
+    sixteen.classList.add('future')
+  }
+  if(currentTime > 17) {
+    seventeen.classList.remove('present')
+    seventeen.classList.add('past')
+  } else if (currentTime < 17){
+    seventeen.classList.remove('present')
+    seventeen.classList.add('future')
+  }
+  }
+  changeColor();
 
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
