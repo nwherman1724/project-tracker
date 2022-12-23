@@ -20,33 +20,11 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
 
-  //if statement that grabs current time and changes class for color based on whether the time is in the past, the curent hour, or a future hour
   let timeSlot = document.querySelectorAll('.time-block');
   let timeSlotArr = [timeSlot];
   let currentTime = dayjs().format('H');
   console.log(currentTime)
   console.log(timeSlotArr)
-  
-//   for(var i = 0; i < timeSlotArr.length; i++){
-//   if(currentTime > timeSlotArr[i]) {
-//     console.log("past")
-//     timeSlotArr[i].classList.add('past');
-//   } else if(currentTime = timeSlotArr[i]) {
-//     console.log("present")
-//     timeSlotArr[i].classList.add('present');
-//   } else {
-//     console.log("future")
-//     timeSlotArr[i].classList.add('future');
-//   }
-// }
-
-
-//adds past to each element
-  // for (const timeBlock of timeSlot){
-  //   console.log(timeBlock)
-  //     timeBlock.classList.add('past');
-  // }
-
 
   function changeColor() {
   var nine = document.getElementById('hour-9');
