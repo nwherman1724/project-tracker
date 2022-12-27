@@ -127,6 +127,173 @@ $(function () {
   timeBlock_9.textContent = input_9;
 
 
+  //time block 10
+  let save_10 = document.getElementById('save-10');
+  let timeBlock_10 = document.querySelector('#text-10')
+
+
+  // saves inputs to local storage upon click
+  save_10.addEventListener('click', function(event) {
+
+   event.preventDefault();
+
+   let text = document.querySelector('#text-10').value;
+
+   localStorage.setItem('text-10', text);
+
+  })
+
+  //gets text-10 from local storage upon page load.
+  let input_10 = localStorage.getItem('text-10');
+  timeBlock_10.textContent = input_10;
+
+
+  //time block 11
+  let save_11 = document.getElementById('save-11');
+  let timeBlock_11 = document.querySelector('#text-11')
+
+
+  // saves inputs to local storage upon click
+  save_11.addEventListener('click', function(event) {
+
+   event.preventDefault();
+
+   let text = document.querySelector('#text-11').value;
+
+   localStorage.setItem('text-11', text);
+
+  })
+
+  //gets text-11 from local storage upon page load.
+  let input_11 = localStorage.getItem('text-11');
+  timeBlock_11.textContent = input_11;
+
+
+  //time block 12
+  let save_12 = document.getElementById('save-12');
+  let timeBlock_12 = document.querySelector('#text-12')
+
+
+  // saves inputs to local storage upon click
+  save_12.addEventListener('click', function(event) {
+
+   event.preventDefault();
+
+   let text = document.querySelector('#text-12').value;
+
+   localStorage.setItem('text-12', text);
+
+  })
+
+  //gets text-12 from local storage upon page load.
+  let input_12 = localStorage.getItem('text-12');
+  timeBlock_12.textContent = input_12;
+
+
+  //time block 13
+  let save_13 = document.getElementById('save-13');
+  let timeBlock_13 = document.querySelector('#text-13')
+
+
+  // saves inputs to local storage upon click
+  save_13.addEventListener('click', function(event) {
+
+   event.preventDefault();
+
+   let text = document.querySelector('#text-13').value;
+
+   localStorage.setItem('text-13', text);
+
+  })
+
+  //gets text-13 from local storage upon page load.
+  let input_13 = localStorage.getItem('text-13');
+  timeBlock_13.textContent = input_13;
+
+
+  //time block 14
+  let save_14 = document.getElementById('save-14');
+  let timeBlock_14 = document.querySelector('#text-14')
+
+
+  // saves inputs to local storage upon click
+  save_14.addEventListener('click', function(event) {
+
+   event.preventDefault();
+
+   let text = document.querySelector('#text-14').value;
+
+   localStorage.setItem('text-14', text);
+
+  })
+
+  //gets text-14 from local storage upon page load.
+  let input_14 = localStorage.getItem('text-14');
+  timeBlock_14.textContent = input_14;
+
+
+  //time block 15
+  let save_15 = document.getElementById('save-15');
+  let timeBlock_15 = document.querySelector('#text-15')
+
+
+  // saves inputs to local storage upon click
+  save_15.addEventListener('click', function(event) {
+
+   event.preventDefault();
+
+   let text = document.querySelector('#text-15').value;
+
+   localStorage.setItem('text-15', text);
+
+  })
+
+  //gets text-15 from local storage upon page load.
+  let input_15 = localStorage.getItem('text-15');
+  timeBlock_15.textContent = input_15;
+
+
+  //time block 16
+  let save_16 = document.getElementById('save-16');
+  let timeBlock_16 = document.querySelector('#text-16')
+
+
+  // saves inputs to local storage upon click
+  save_16.addEventListener('click', function(event) {
+
+   event.preventDefault();
+
+   let text = document.querySelector('#text-16').value;
+
+   localStorage.setItem('text-16', text);
+
+  })
+
+  //gets text-16 from local storage upon page load.
+  let input_16 = localStorage.getItem('text-16');
+  timeBlock_16.textContent = input_16;
+
+
+  //time block 17
+  let save_17 = document.getElementById('save-17');
+  let timeBlock_17 = document.querySelector('#text-17')
+
+
+  // saves inputs to local storage upon click
+  save_17.addEventListener('click', function(event) {
+
+   event.preventDefault();
+
+   let text = document.querySelector('#text-17').value;
+
+   localStorage.setItem('text-17', text);
+
+  })
+
+  //gets text-11 from local storage upon page load.
+  let input_17 = localStorage.getItem('text-17');
+  timeBlock_17.textContent = input_17;
+
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
