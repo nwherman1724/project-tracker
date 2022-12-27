@@ -107,6 +107,22 @@ $(function () {
   // useful when saving the description in local storage?
   //
 
+  let save_9 = document.getElementById('save-9');
+  let textArea_9 = document.querySelector('.description-9').value;
+  let text = localStorage.getItem('text');
+
+  console.log('.description.value')
+
+  textArea_9.textContent = text;
+
+  save_9.addEventListener('click', function(event) {
+
+    textArea_9.textContent = text;
+
+    localStorage.setItem('textArea_9', text)
+
+
+  })
 
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
