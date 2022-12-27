@@ -108,19 +108,15 @@ $(function () {
   //
 
   let save_9 = document.getElementById('save-9');
-  let textArea_9 = document.querySelector('.description-9').value;
-  let text = localStorage.getItem('text');
-
-  console.log('.description.value')
-
-  textArea_9.textContent = text;
+  
 
   save_9.addEventListener('click', function(event) {
 
-    textArea_9.textContent = text;
+   event.preventDefault();
 
-    localStorage.setItem('textArea_9', text)
+   let text = document.querySelector('#text-9').value;
 
+   console.log(text)
 
   })
 
