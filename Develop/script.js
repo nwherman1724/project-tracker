@@ -108,17 +108,24 @@ $(function () {
   //
 
   let save_9 = document.getElementById('save-9');
-  
+  let timeBlock_9 = document.querySelector('#text-9')
 
+
+  // saves inputs to local storage upon click
   save_9.addEventListener('click', function(event) {
 
    event.preventDefault();
 
    let text = document.querySelector('#text-9').value;
 
-   console.log(text)
+   localStorage.setItem('text-9', text);
 
   })
+
+  //gets text-9 from local storage upon page load.
+  let input_9 = localStorage.getItem('text-9');
+  timeBlock_9.textContent = input_9;
+
 
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
