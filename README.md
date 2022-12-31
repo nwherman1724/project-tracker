@@ -44,7 +44,7 @@ THEN the saved events persist
 
 The following animation demonstrates the application functionality:
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/project-tracker-demo.mov)
+![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/project-tracker-demo.gif)
 
 ## Credits
 
