@@ -8,89 +8,102 @@ $(function () {
   let currentTime = dayjs().format('H');
 
 
+  function myFunc (timeBlock, time) {
+
+    if(currentTime > time) {
+      timeBlock.classList.remove('present')
+      timeBlock.classList.add('past')
+    } 
+    // if currentTime is less than 9 remove the class present and add the class future
+    // this changes the color
+    else if (currentTime < time){
+      timeBlock.classList.remove('present')
+      timeBlock.classList.add('future')
+    }
+
+  }
+
   // Function that changes the color of the time block based on the time time of day
   function changeColor() {
 
-  // initializing variable that point to each time block element
-  var nine = document.getElementById('hour-9');
-  var ten = document.getElementById('hour-10');
-  var eleven = document.getElementById('hour-11');
-  var twelve = document.getElementById('hour-12');
-  var thirteen = document.getElementById('hour-13');
-  var fourteen = document.getElementById('hour-14');
-  var fifteen = document.getElementById('hour-15');
-  var sixteen = document.getElementById('hour-16');
-  var seventeen = document.getElementById('hour-17');
+    // initializing variable that point to each time block element
+    // var nine = document.getElementById('hour-9');
+    // var ten = document.getElementById('hour-10');
+    // var eleven = document.getElementById('hour-11');
+    // var twelve = document.getElementById('hour-12');
+    // var thirteen = document.getElementById('hour-13');
+    // var fourteen = document.getElementById('hour-14');
+    // var fifteen = document.getElementById('hour-15');
+    // var sixteen = document.getElementById('hour-16');
+    // var seventeen = document.getElementById('hour-17');
 
-  // if currentTime is greater than 9 remove the class present and add the class past
-  // this changes the color
-  if(currentTime > 9) {
-    nine.classList.remove('present')
-    nine.classList.add('past')
-  } 
-  // if currentTime is less than 9 remove the class present and add the class future
-  // this changes the color
-  else if (currentTime < 9){
-    nine.classList.remove('present')
-    nine.classList.add('future')
-  }
-  // same logic in lines 39-37 applies in lines 50-105
-  if(currentTime > 10) {
-    ten.classList.remove('present')
-    ten.classList.add('past')
-  } else if (currentTime < 10){
-    ten.classList.remove('present')
-    ten.classList.add('future')
-  }
-  if(currentTime > 11) {
-    eleven.classList.remove('present')
-    eleven.classList.add('past')
-  } else if (currentTime < 11){
-    eleven.classList.remove('present')
-    eleven.classList.add('future')
-  }
-  if(currentTime > 12) {
-    twelve.classList.remove('present')
-    twelve.classList.add('past')
-  } else if (currentTime < 12){
-    twelve.classList.remove('present')
-    twelve.classList.add('future')
-  }
-  if(currentTime > 13) {
-    thirteen.classList.remove('present')
-    thirteen.classList.add('past')
-  } else if (currentTime < 13){
-    thirteen.classList.remove('present')
-    thirteen.classList.add('future')
-  }
-  if(currentTime > 14) {
-    fourteen.classList.remove('present')
-    fourteen.classList.add('past')
-  } else if (currentTime < 14){
-    fourteen.classList.remove('present')
-    fourteen.classList.add('future')
-  }
-  if(currentTime > 15) {
-    fifteen.classList.remove('present')
-    fifteen.classList.add('past')
-  } else if (currentTime < 15){
-    fifteen.classList.remove('present')
-    fifteen.classList.add('future')
-  }
-  if(currentTime > 16) {
-    sixteen.classList.remove('present')
-    sixteen.classList.add('past')
-  } else if (currentTime < 16){
-    sixteen.classList.remove('present')
-    sixteen.classList.add('future')
-  }
-  if(currentTime > 17) {
-    seventeen.classList.remove('present')
-    seventeen.classList.add('past')
-  } else if (currentTime < 17){
-    seventeen.classList.remove('present')
-    seventeen.classList.add('future')
-  }
+    var timeBlocks = document.querySelectorAll('.time-block');           
+
+    //var array = [nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen];
+
+    for(let i = 0; i< timeBlocks.length; i++){
+      myFunc(timeBlocks[i], i + 9 );
+    }
+    // if currentTime is greater than 9 remove the class present and add the class past
+    // this changes the color
+    // myFunc(nine, 9);
+    // // same logic in lines 39-37 applies in lines 50-105
+    // if(currentTime > 10) {
+    //   ten.classList.remove('present')
+    //   ten.classList.add('past')
+    // } else if (currentTime < 10){
+    //   ten.classList.remove('present')
+    //   ten.classList.add('future')
+    // }
+    // if(currentTime > 11) {
+    //   eleven.classList.remove('present')
+    //   eleven.classList.add('past')
+    // } else if (currentTime < 11){
+    //   eleven.classList.remove('present')
+    //   eleven.classList.add('future')
+    // }
+    // if(currentTime > 12) {
+    //   twelve.classList.remove('present')
+    //   twelve.classList.add('past')
+    // } else if (currentTime < 12){
+    //   twelve.classList.remove('present')
+    //   twelve.classList.add('future')
+    // }
+    // if(currentTime > 13) {
+    //   thirteen.classList.remove('present')
+    //   thirteen.classList.add('past')
+    // } else if (currentTime < 13){
+    //   thirteen.classList.remove('present')
+    //   thirteen.classList.add('future')
+    // }
+    // if(currentTime > 14) {
+    //   fourteen.classList.remove('present')
+    //   fourteen.classList.add('past')
+    // } else if (currentTime < 14){
+    //   fourteen.classList.remove('present')
+    //   fourteen.classList.add('future')
+    // }
+    // if(currentTime > 15) {
+    //   fifteen.classList.remove('present')
+    //   fifteen.classList.add('past')
+    // } else if (currentTime < 15){
+    //   fifteen.classList.remove('present')
+    //   fifteen.classList.add('future')
+    // }
+    // if(currentTime > 16) {
+    //   sixteen.classList.remove('present')
+    //   sixteen.classList.add('past')
+    // } else if (currentTime < 16){
+    //   sixteen.classList.remove('present')
+    //   sixteen.classList.add('future')
+    // }
+    // if(currentTime > 17) {
+    //   seventeen.classList.remove('present')
+    //   seventeen.classList.add('past')
+    // } else if (currentTime < 17){
+    //   seventeen.classList.remove('present')
+    //   seventeen.classList.add('future')
+    // }
   }
 
   // Calling change color function
